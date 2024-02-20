@@ -10,8 +10,14 @@ public class EmailValidator implements Validator {
         /*TODO: Validate that email begins with a letter or number, contains only letters, numbers, "." and "_", and
         *that it follows the pattern of name@domain.identifier
         */
+        if (email == null) {
+            throw new EmailValidationException("");
+        }
+        // Regular expression pattern
+        String emailCriteria = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
 
-        return true;
+        // Check if password matches the criteria
+        return email.matches(emailCriteria);
     }
 
     @Override

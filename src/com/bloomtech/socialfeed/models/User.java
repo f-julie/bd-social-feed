@@ -2,6 +2,7 @@ package com.bloomtech.socialfeed.models;
 
 import com.bloomtech.socialfeed.App;
 import com.bloomtech.socialfeed.observerpattern.OUserFeed;
+import com.bloomtech.socialfeed.observerpattern.SourceFeed;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,15 @@ public class User {
 
     //transient properties are not written to JSON
     private transient OUserFeed userFeed;
+    private SourceFeed sourceFeed;
 
+    // Original constructor
+    //public User() {
+    //    following = new ArrayList<>();
+    //    userFeed = new OUserFeed(this);
+    //}
+
+    // My constructor with user's feed attached to sourceFeed after instantiation
     public User() {
         following = new ArrayList<>();
         userFeed = new OUserFeed(this);

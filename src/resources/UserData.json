@@ -1,0 +1,28 @@
+[
+  {
+    "username": "Leader",
+    "email": "leader@email.com",
+    "password": "TestPass123",
+    "role": "ADMIN",
+    "following": [
+      "Follower"
+    ]
+  },
+  {
+    "username": "Follower",
+    "email": "follower@email.com",
+    "password": "TestPass123",
+    "role": "USER",
+    "following": [
+      "Leader",
+      "Loner"
+    ]
+  },
+  {
+    "username": "Loner",
+    "email": "loner@email.com",
+    "password": "TestPass123",
+    "role": "DATA",
+    "following": []
+  }
+]
